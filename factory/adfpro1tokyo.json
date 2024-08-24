@@ -1,0 +1,9 @@
+{
+	"name": "adfpro1tokyo",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "60c4173b-c51f-4093-b67f-d0d6f66f55d2",
+		"tenantId": "addfe6ba-7cfb-4ab8-89a6-773274040541"
+	}
+}
