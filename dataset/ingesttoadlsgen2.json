@@ -1,0 +1,35 @@
+{
+	"name": "ingesttoadlsgen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoragels",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "NOC",
+				"type": "String"
+			},
+			{
+				"name": "Discipline",
+				"type": "String"
+			}
+		]
+	}
+}

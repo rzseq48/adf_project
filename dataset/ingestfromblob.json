@@ -1,0 +1,44 @@
+{
+	"name": "ingestfromblob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageingest1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"container": "feeder"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "NOC",
+				"type": "String"
+			},
+			{
+				"name": "Discipline",
+				"type": "String"
+			}
+		]
+	}
+}

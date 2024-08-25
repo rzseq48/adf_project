@@ -1,0 +1,22 @@
+{
+	"name": "blobstorageingest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageingest1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "feeder"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
